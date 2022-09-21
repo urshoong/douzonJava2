@@ -1,0 +1,21 @@
+예외 ->	try~catch~finally -> 내 책임
+		try-with-resources -> 최선은 다 하겠지만 오류는 날 수 있다
+		throws Exception -> 
+		사용자정의 예외 -> 
+
+언제 try-catch고 언제 throws인가?
+
+checked exception -> compiler check
+	외부통신하는 부분은 다 checked exception
+	
+unchecked exception -> runtime check
+	
+
+
+
+
+
+
+
+
+
