@@ -50,7 +50,14 @@ public class HttpServer2 {
 					out.write(new String("HTTP/1.1 200 OK\r\n").getBytes());
 					//out.write(new String("Cache-Control: private\r\n").getBytes());
 					//out.write(new String("Content-Length:"+msg.getBytes("UTF-8").length+"\r\n").getBytes());
-					out.write(new String("Content-Type: "+ mimeMap.get(ext)+" \r\n\r\n").getBytes());
+//					String contentType = (mimeMap.get(ext) == null ? "application/octet-stream" : mimeMap.get(ext));
+					String contentType = mimeMap.get(ext);
+					System.out.println("content Type : " + contentType);
+					if(contentType.equals(null)) {
+						out.write(new String("Content-Disposition: attachment;").getBytes());
+					}else {
+						out.write(new String("Content-Type: "+ contentType +" \r\n\r\n").getBytes());
+					}
 					//out.write(msg.getBytes(StandardCharsets.UTF_8));
 					
 					FileInputStream fin = new FileInputStream("C:\\zzz"+fileName);
