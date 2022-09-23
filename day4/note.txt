@@ -33,10 +33,17 @@ Java에서 클로저는 반쪽짜리 클로저이다**
 JavaScript에서는 람다식에서 외부 변수의 값을 변경할 수 있다.
 Java 에서는 this참조가 불가능하며, 외부에서 참조하는 변수의 변경이 불가능하다.
 
+기본적으로는 Thread Safe 하려면 지역변수만을 사용해서 작성하면 된다.
 
-pool
-	object pool
-	connection pool
-	Thread pool
 
+pool의 종류
+1. object pool
+2. connection pool
+3. Thread pool
+
+
+라이프 사이클
+
+
+인터페이스 - 추상클래스 - 구현체
 
